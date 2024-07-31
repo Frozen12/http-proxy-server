@@ -10,10 +10,10 @@ RUN mkdir /app
 WORKDIR /app
 
 # Download and extract the binary
-RUN wget "https://github.com/xzeldon/http-proxy-server/releases/download/v1.0.0/http-proxy-server-v1.0.0-linux-amd64.tar.gz" \
-    && tar -xvzf "http-proxy-server-v1.0.0-linux-amd64.tar.gz" \
-    && mv "http-proxy-server-v1.0.0-linux-amd64/http-proxy-server" /app/ \
-    && rm -rf *http-proxy-server-v1.0.0-linux-amd64" "http-proxy-server-v1.0.0-linux-amd64.tar.gz"
+RUN wget https://github.com/xzeldon/http-proxy-server/releases/download/v1.0.0/http-proxy-server-v1.0.0-linux-amd64.tar.gz \
+    && tar -xvzf http-proxy-server-v1.0.0-linux-amd64.tar.gz \
+    && mv http-proxy-server-v1.0.0-linux-amd64/http-proxy-server /app/ \
+    && rm -rf http-proxy-server-v1.0.0-linux-amd64 http-proxy-server-v1.0.0-linux-amd64.tar.gz
 
 # Ensure the binary has execution permissions
 RUN chmod +x /app/http-proxy-server
